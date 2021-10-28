@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listafragment">
+
+    <fragment
+        android:id="@+id/listafragment"
+        android:name="com.example.rubricatelefonica.listafragment"
+        android:label="Rubrica"
+        tools:layout="@layout/fragment_listafragment">
+        <action
+            android:id="@+id/action_listafragment_to_addfragment"
+            app:destination="@id/addfragment"
+            app:popUpTo="@id/addfragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addfragment"
+        android:name="com.example.rubricatelefonica.addfragment"
+        android:label="Aggiungi contatto"
+        tools:layout="@layout/fragment_addfragment">
+        <action
+            android:id="@+id/action_addfragment_to_listafragment"
+            app:destination="@id/listafragment" />
+    </fragment>
+</navigation>
